@@ -22,7 +22,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  background: #FF4500;
+  background: #fff;
 }
 
 
@@ -50,7 +50,7 @@ body {
   color: silver;
 }
 .sidenav a i:hover {
-  color: #03486a;
+  color: red;
 }
 .sidenav hr {
   width: 100%;
@@ -70,12 +70,19 @@ body {
 .mobileNav {
   background-color: #111;
 }
+.mobileNav nav {
+   /*position: fixed;*/
+   z-index: 1;
+}
 .navbar-toggler-icon {
   height: 4.5vh;
   border-radius: 30px;
 }
 .mobileNav .navbar-nav {
   font-size: 1.5rem;
+}
+.mobileNav .navbar-nav i {
+   color: #FF4500; 
 }
 /*** END OF MOBILE NAV ***/
 
@@ -108,28 +115,23 @@ body {
   font-size: 28px;  /*Increased text to enable scrolling*/
   padding: 0px;
   margin-top: 0px;
-  overflow: hidden;
-  /* width: 100%; */
+  overflow-x: hidden; 
 }
 
 
 /*** HOME ***/
+#home {
+   background: rgba(255, 69, 0, 0.8);
+}
 .parallax {
   position: relative;
   color: #111;
   /*text-align: center;*/
-  background: linear-gradient(90deg,rgba(255, 78, 64, 0.9) 10%, rgb(253, 221, 24) 100%), url('../images/blue-it.jpg');
-  /* Set a specific height*/
-  min-height: 110vh;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-.parallax .container {
+  /* Set a specific height*/
+  min-height: 100vh;
   display: flex;
-  margin: 0 auto;
+  margin-left: 2.5vw;
 }
 .home-content {
   position: absolute;
@@ -138,19 +140,18 @@ body {
   padding-left: 29px;
   padding-top: 80px;
 
-  /*background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-position: center;
-  background-size: cover;*/
+  background-size: cover;
 }
-.home-content p.company {
+.home-content h1.company {
   font-family: 'Russo One', sans-serif;
-  font-size: 50px;
+  font-size: 3.5rem;
   font-weight: bold;
 }
 .extra-home-content {
-  font-family: 'Open Sans Condensed', sans-serif;
   padding-top: 40px;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 40px;
   margin-top: 70px;
 }
@@ -158,16 +159,8 @@ body {
   font-family: 'Leckerli One', cursive;
 }
 .extra-home-content p#start {
-  color: #071872;
-  font-size: 0.9em;
-}
-.extra-home-content p#plan {
-  color: #840050;
-  font-size: 0.9em;
-}
-.extra-home-content p#eat {
-  color: #fd0006;
-  font-size: 0.9em;
+  color: #111;
+  font-size: 0.6em;
 }
 .brand-package {
   position: absolute;
@@ -180,32 +173,30 @@ body {
   width: 100%;
 }
 .brand-package2 {
-  padding-top: 30px;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-left: 920px;
+   overflow: hidden;
+   margin: 0 auto;
+   margin-left: 130vh;
 }
 .brand-package2 img {
-  width: 70%;
-  -ms-transform: rotate(350deg); /* IE 9 */
-  transform: rotate(350deg);
-  opacity: 0.6;
+  width: 190%;
+  /*-ms-transform: rotate(350deg);*/ /* IE 9 */
+  /*transform: rotate(350deg);*/
+  opacity: 0.2;
 }
 .learn-more-tag {
-  margin-top: 18em;
-  margin-bottom: 20px;
+  margin-top: 72vh;
 }
 .learn-more-tag a {
   font-family: 'Fjalla One', sans-serif;
   text-decoration: none;
-  font-size: 20px;
-  color: #fff;
-  background-color: #03486a; 
-  padding: 5px 35px;
+  font-size: 1.3rem;
+  color: #FFF;
+  background-color: #111;
   border-radius: 30px;
+  padding: 5px 35px;
 }
 .learn-more-tag a:hover {
-  background-color: #03486a99;
+  color: gray;
 }
 /*** END OF HOME ***/
 
@@ -215,9 +206,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 950px;
-  color: #111;
-  /*background-color: #111;;*/
-  /*opacity: 0.5;*/
+  /*color: #111;*/
+  background-color: #111;
 }
 .about-container {
   display: flex;
@@ -267,18 +257,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-.col-img-about .first-img {
-  transform: translateY(40%);
-}
-.col-img-about .first-img img {
-  width: 100%;
-}
-.col-img-about .second-img {
-  transform: translateY(60%);
-}
-.col-img-about .second-img img {
-  width: 100%;
-}
 .testimonial-tag {
   margin-top: 1vh;
   margin-left: 5vw;
@@ -286,15 +264,14 @@ body {
 .testimonial-tag a {
   font-family: 'Fjalla One', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.3rem;
   text-decoration: none;
   padding: 5px 35px;
   border-radius: 30px;
-  background-color: red;
   color: #111;
 }
 .testimonial-tag a:hover {
-  background-color: rgba(700,0,0,0.7);
+  background: rgba(700,0,0,0.7);
 }
 /*** END OF ABOUT SECTION ***/
 
@@ -377,7 +354,6 @@ body {
 /*** PAGE FOOTER ***/
 .footer {
   margin: 0 auto;
-  background-color: rgba(0,0,0,0.9);
 }
 .footer #end-line {
   font-size: 20px;
@@ -470,6 +446,9 @@ body {
     font-size: 36px;
     margin-left: 50px;
   }
+  .hidden-xs {
+   display: none;
+  }
   /*** END OF SIDENAV MOBILE SCREEN ***/
 
   /*** ABOUT SECTION ***/
@@ -480,23 +459,54 @@ body {
 }
 
 
-/**** SMALL DEVICES *****/
-@media (min-width: 768px) and (max-width: 991px) {}
+/*** MEDIA QUERIES ***/
+/*No media query for `xs` since this is the default in Bootstrap*/
 
+/*Extra small devices {xs} (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+   .home-content h1.company {
+      font-size: 1.9rem;
+   }
+   .parallax {
+      min-height: 100vh;
+      margin-left: 0;
+      margin-right: 2px;
+   }
+   .home-content {
+      padding-top: 7vh;
+   }
+   .extra-home-content {
+      font-size: 2rem;
+      line-height: 20px;
+      margin-top: 25vh;
+   }
+   .brand-package {
+      padding-top: 30vh;
+      margin-left: 3vw;
+   }
+   .brand-package img {
+      width: 55%;
+   }
+   .brand-package2 {
+      margin-left: 10vh;
+   }
+   .brand-package2 img {
+      width: 200%;
+      opacity: 0.1;
+   }
+}
 
-/**** MEDIUM DEVICES Only *****/
-@media (min-width: 992px) and (max-width: 1199px) {}
+/*Small devices {sm} (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
 
+/*Medium devices {md} (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
 
-/**** LARGE DEVICES ONLY *****/
-@media (min-width: 1200px) {}
+/*Large devices {lg} (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
 
-
-/*@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}*/
-
+/*Extra large devices {xl} (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
 
 /**** SUPER EXTRA SMALL DEVICES: only e.g, iPhone 4/5 Galaxy S5 *****/
 @media (max-width: 361px) {
@@ -504,4 +514,28 @@ body {
     margin-left: 2px;
     font-style: 15px;
   }
+}
+
+
+
+/*Extra small devices {xs} (Moto G4 & Galaxy, less than 360px)*/
+@media (max-width: 360.98px) {
+  .brand-package {
+      padding-top: 35vh;
+   }
+   .extra-home-content {
+      margin-top: 30vh;
+   } 
+}
+
+
+/*Extra small devices {xs} (iPhone 5/SE, less than 320px)*/
+@media (max-width: 320.98px) {
+   .home-content h1.company {
+      font-size: 1.6rem;
+   }
+   .extra-home-content {
+      font-size: 1.7rem;
+      margin-top: 33vh;
+   }
 }
