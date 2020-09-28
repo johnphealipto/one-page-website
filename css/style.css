@@ -48,6 +48,8 @@ body {
 }
 .sidenav a i {
   color: silver;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .sidenav a i:hover {
   color: red;
@@ -82,7 +84,7 @@ body {
   font-size: 1.5rem;
 }
 .mobileNav .navbar-nav i {
-   color: #FF4500; 
+   color: red; 
 }
 /*** END OF MOBILE NAV ***/
 
@@ -141,8 +143,8 @@ body {
   padding-top: 80px;
 
   /*background-attachment: fixed;*/
-  background-position: center;
-  background-size: cover;
+  /*background-position: center;*/
+  /*background-size: cover;*/
 }
 .home-content h1.company {
   font-family: 'Russo One', sans-serif;
@@ -164,21 +166,19 @@ body {
 }
 .brand-package {
   position: absolute;
-  padding-top: 250px;
+  padding-top: 42vh;
   overflow: hidden;
   margin: 0 auto;
-  margin-left: 550px;
+  margin-left: 80vh;
 }
 .brand-package img {
-  width: 100%;
+  width: 45%;
 }
 .brand-package2 {
-   overflow: hidden;
-   margin: 0 auto;
-   margin-left: 130vh;
+   margin-left: 110vh;
 }
 .brand-package2 img {
-  width: 190%;
+  width: 250%;
   /*-ms-transform: rotate(350deg);*/ /* IE 9 */
   /*transform: rotate(350deg);*/
   opacity: 0.2;
@@ -194,9 +194,11 @@ body {
   background-color: #111;
   border-radius: 30px;
   padding: 5px 35px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 .learn-more-tag a:hover {
-  color: gray;
+  background-color: rgb(255, 69, 0);
 }
 /*** END OF HOME ***/
 
@@ -435,20 +437,6 @@ body {
     display: block;
     transition: 0.3s;
   }
-  .sidenav a:hover {
-    color: #fff;
-    background-color: #111;
-  }
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: -60px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  .hidden-xs {
-   display: none;
-  }
   /*** END OF SIDENAV MOBILE SCREEN ***/
 
   /*** ABOUT SECTION ***/
@@ -473,61 +461,57 @@ body {
       margin-right: 2px;
    }
    .home-content {
-      padding-top: 7vh;
+      padding-top: 10vh;
    }
    .extra-home-content {
       font-size: 2rem;
       line-height: 20px;
-      margin-top: 25vh;
+      margin-top: 28vh;
    }
    .brand-package {
-      padding-top: 30vh;
+      padding-top: 33vh;
       margin-left: 3vw;
    }
    .brand-package img {
-      width: 55%;
+      width: 45%;
    }
    .brand-package2 {
       margin-left: 10vh;
+      margin-top: 20vh;
    }
    .brand-package2 img {
       width: 200%;
       opacity: 0.1;
    }
+   button.hidden-xs {
+      visibility: hidden;
+   }
+   .learn-more-tag {
+      padding-top: 7vh;
+   }
+   .learn-more-tag a {
+      padding: 1px 20px;
+   }
 }
-
-/*Small devices {sm} (landscape phones, 576px and up)*/
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
-
-/*Medium devices {md} (tablets, 768px and up)*/
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
-/*Large devices {lg} (desktops, 992px and up)*/
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
-/*Extra large devices {xl} (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { ... }
-
-/**** SUPER EXTRA SMALL DEVICES: only e.g, iPhone 4/5 Galaxy S5 *****/
-@media (max-width: 361px) {
-  #navbar a {
-    margin-left: 2px;
-    font-style: 15px;
-  }
-}
-
-
 
 /*Extra small devices {xs} (Moto G4 & Galaxy, less than 360px)*/
 @media (max-width: 360.98px) {
+   .home-content {
+      padding-top: 6vh;
+   }
   .brand-package {
-      padding-top: 35vh;
+      padding-top: 30vh;
+   }
+   .brand-package img {
+      width: 50%;
    }
    .extra-home-content {
-      margin-top: 30vh;
-   } 
+      margin-top: 27vh;
+   }
+   .learn-more-tag {
+      padding-top: 3vh;
+   }
 }
-
 
 /*Extra small devices {xs} (iPhone 5/SE, less than 320px)*/
 @media (max-width: 320.98px) {
@@ -536,6 +520,96 @@ body {
    }
    .extra-home-content {
       font-size: 1.7rem;
+      margin-top: 26vh;
+   }
+   .learn-more-tag a {
+      font-size: 1rem;
+      padding: 3px 30px;
+   }
+}
+
+/*Extra small devices {xs} (Galaxy Fold, less than 280px)*/
+@media (max-width: 280.98px) {
+   .home-content h1.company {
+      font-size: 1.4rem;
+   }
+   .parallax {
+      min-height: 100vh;
+      margin-left: 0;
+      margin-right: 2px;
+   }
+   .home-content {
+      padding-top: 10vh;
+   }
+   .extra-home-content {
+      font-size: 1.5rem;
+      line-height: 20px;
+      margin-top: 28vh;
+   }
+   .learn-more-tag {
+      padding-top: 5vh;
+   }
+}
+
+/*Extra small devices {xs} (Surface Duo, less than 280px)*/
+@media only screen and (device-width : 540px) and (device-height: 720px) {
+   .brand-package img {
+      width: 35%;
+   }
+   .extra-home-content {
       margin-top: 33vh;
    }
 }
+
+
+
+
+/*Small devices {sm} (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+
+/*Medium devices {md} (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+   .home-content h1.company {
+      font-size: 2.8rem;
+   }
+   .home-content {
+      padding-top: 10vh;
+   }
+   .extra-home-content {
+      font-size: 2rem;
+      line-height: 20px;
+      margin-top: 28vh;
+   }
+   .brand-package {
+      padding-top: 33vh;
+      margin-left: 3vw;
+   }
+   .brand-package img {
+      width: 40%;
+   }
+   .brand-package2 {
+      margin-left: 20vh;
+      margin-top: 20vh;
+   }
+   .brand-package2 img {
+      width: 230%;
+      opacity: 0.2;
+   }
+   button.hidden-xs {
+      visibility: hidden;
+   }
+   .learn-more-tag {
+      padding-top: 5vh;
+   }
+   .learn-more-tag a {
+      font-size: 1.4rem;
+      padding: 1px 20px;
+   }
+}
+
+/*Large devices {lg} (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+/*Extra large devices {xl} (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { ... }
