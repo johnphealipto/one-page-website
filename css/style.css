@@ -173,6 +173,8 @@ body {
 }
 .brand-package img {
   width: 45%;
+  -webkit-filter: drop-shadow(7px -3px 5px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(7px -3px 5px rgba(0, 0, 0, 0.3));
 }
 .brand-package2 {
    margin-left: 110vh;
@@ -182,6 +184,8 @@ body {
   /*-ms-transform: rotate(350deg);*/ /* IE 9 */
   /*transform: rotate(350deg);*/
   opacity: 0.2;
+  -webkit-filter: drop-shadow(-7px -3px 5px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(-7px -3px 5px rgba(0, 0, 0, 0.3));
 }
 .learn-more-tag {
   margin-top: 72vh;
@@ -568,7 +572,7 @@ body {
 @media (min-width: 576px) and (max-width: 767.98px) { ... }
 
 
-/*Medium devices {md} (tablets, 768px and up)*/
+/*Medium devices {md} (tablets iPad, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) { 
    .home-content h1.company {
       font-size: 2.8rem;
@@ -607,6 +611,38 @@ body {
       padding: 1px 20px;
    }
 }
+
+/*Medium devices {md} (tablets iPad Pro)*/
+@media only screen and (device-width : 1024px) and (device-height: 1366px) {
+   .home-content h1.company {
+      margin-top: 5vh;
+   }
+   .brand-package {
+      padding-top: 32vh;
+      margin-left: 3vw;
+   }
+   .brand-package img {
+      width: 30%;
+   }
+   .brand-package2 {
+      margin-left: 20vh;
+      margin-top: 20vh;
+   }
+   .brand-package2 img {
+      width: 300%;
+   }
+   .learn-more-tag {
+      padding-top: 5vh;
+   }
+   .extra-home-content {
+      font-size: 2.5rem;
+      line-height: 20px;
+      margin-top: 30vh;
+   }
+}
+
+
+
 
 /*Large devices {lg} (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) { ... }
