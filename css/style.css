@@ -326,10 +326,10 @@ h1.heading {
   font-size: 0.8em;
 }
 .comment-id small {
-  color: rgb(255, 69, 0);
+  color: rgb(86, 100, 135);
 }
 .comment-id span {
-  color: rgba(86, 100, 135, 0.9);
+  color: rgba(255, 69, 0, 0.7);
 }
 .col-img-comments {
    margin-left: 0;
