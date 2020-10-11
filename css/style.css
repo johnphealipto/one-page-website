@@ -300,6 +300,7 @@ h1.heading {
 .comments {
   padding-left: 50px;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 .comment-head h2 {
    color: rgba(203, 214, 232, 0.8);
@@ -318,6 +319,7 @@ h1.heading {
 }
 .comment p {
    letter-spacing: 1px;
+   font-style: italic;
 }
 .comment-id {
   margin-top: -10px;
@@ -327,7 +329,7 @@ h1.heading {
   color: rgb(255, 69, 0);
 }
 .comment-id span {
-  color: rgba(86, 100, 135, 0.7);
+  color: rgba(86, 100, 135, 0.9);
 }
 .col-img-comments {
    margin-left: 0;
@@ -338,7 +340,7 @@ h1.heading {
    width: 150%;
    margin-top: 15vh;
    margin-bottom: 5vh;
-   margin-left: -160px;
+   margin-left: -100px;
    -webkit-filter: drop-shadow(7px -3px 5px rgba(203, 214, 232, 0.5));
   filter: drop-shadow(7px -3px 5px rgba(203, 214, 232, 0.5));
 }
@@ -347,7 +349,7 @@ h1.heading {
 
 /*** GALLERY BOX ***/
 .gallery {
-   background: linear-gradient(rgba(255, 162, 0, 0.8) 95%, red 100%);
+   background: #fff;
 }
 .gallery-content {
    padding-bottom: 15px;
