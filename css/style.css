@@ -36,7 +36,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(30, 30, 30);
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -45,12 +45,12 @@ body {
    padding: 10px 30px 10px 16px;
    text-decoration: none;
    font-size: 1.3rem;
-   color: rgba(203, 214, 232, 0.6);
+   color: rgb(203, 214, 232);
    display: block;
    text-align: center;
 }
 .sidenav a i {
-  color: rgba(235, 145, 29, 0.7);
+  color: rgba(235, 145, 29, 0.9);
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.5s ease-out;
 }
