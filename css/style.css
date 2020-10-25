@@ -292,7 +292,8 @@ h1.heading {
 /*** COMMENTS BOX ***/
 #comments {
   display: flex;
-  background-color: rgb(33, 37, 46);
+  background-color: color: rgb(235, 145, 29);
+  /*rgb(33, 37, 46)*/
 }
 .col-content-comments {
    margin-right: 20px;
@@ -303,13 +304,10 @@ h1.heading {
   padding-bottom: 5vh;
 }
 .comment-head h2 {
-   color: rgba(203, 214, 232, 0.8);
+   color: #fff;
 }
 .comment-content {
   /*padding-top: 20px;*/
-}
-.comment-content p {
-  font-size: 1.2rem;
 }
 .comment {
    font-family: 'Roboto', sans-serif;
@@ -320,6 +318,9 @@ h1.heading {
 .comment p {
    letter-spacing: 1px;
    font-style: italic;
+   color: #111;
+   font-size: 1.2rem;
+   font-weight: bold;
 }
 .comment-id {
   margin-top: -10px;
@@ -334,15 +335,15 @@ h1.heading {
 .col-img-comments {
    margin-left: 0;
    width: 100vw;
-   background-color: rgba(203, 214, 232, 0.8);
+   background-color: rgb(33, 37, 46);
 }
 .col-img-comments img {
    width: 150%;
    margin-top: 15vh;
    margin-bottom: 5vh;
    margin-left: -100px;
-   -webkit-filter: drop-shadow(7px -3px 5px rgba(203, 214, 232, 0.5));
-  filter: drop-shadow(7px -3px 5px rgba(203, 214, 232, 0.5));
+   -webkit-filter: drop-shadow(1px 0 5px rgba(203, 214, 232, 0.5));
+  filter: drop-shadow(1px 0 5px rgba(203, 214, 232, 0.5));
 }
 /*** END OF COMMENTS BOX ***/
 
@@ -351,11 +352,56 @@ h1.heading {
 .gallery {
    background: #fff;
 }
-.gallery-content {
-   padding-bottom: 15px;
+@media (max-width: 768px) {
+   .carousel-inner .carousel-item > div {
+      display: none;
+   }
+   .carousel-inner .carousel-item > div:first-child {
+      display: block;
+   }
 }
-.gallery-content i {
-   color: red;
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+   display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+   .carousel-inner .carousel-item-right.active,
+   .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+   }
+    
+   .carousel-inner .carousel-item-left.active, 
+   .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+   }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+   height: 100px;
+   width: 100px;
+   background-image: none;
+}
+
+.carousel-control-next-icon:after {
+  content: '>';
+  font-size: 55px;
+  color: #111;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #111;
 }
 /*** END OF GALLERY BOX ***/
 
